@@ -54,28 +54,34 @@ function filterServices(category) {
    BOOKING FORM WHATSAPP
 ========================= */
 
-const bookingForm = document.getElementById("bookingform");
+function bookService(service) {
+    const name = document.getElementById("name").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const message = document.getElementById("message").value;
 
-if (bookingForm) {
-    bookingForm.addEventListener("submit", function(e) {
-        e.preventDefault();
+    const phoneNumber = "27608060362";
 
-        const name = document.getElementById("name").value;
-        const service = document.getElementById("service").value;
-        const date = document.getElementById("date").value;
-        const time = document.getElementById("time").value;
-        const message = document.getElementById("message").value;
+    if (!name || !date || !time) {
+        alert("Please fill in your name, date, and time.");
+        return;
+    }
 
-        const phoneNumber = "27608060362"; 
+    let text = "Hello Unity's Barbershop,\n\n";
+    text += `Name: ${name}\n`;
+    text += `Service: ${service}\n`;
+    text += `Date: ${date}\n`;
+    text += `Time: ${time}\n`;
 
-        const text = `Hello Unity's Barbershop,%0A
-Name: ${name}%0A
-Service: ${service}%0A
-Date: ${date}%0A
-Time: ${time}%0A
-Notes: ${message}`;
+    if (message) {
+        text += `Notes: ${message}\n`;
+    }
 
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${text}`;
-        window.open(whatsappURL, "_blank");
-    });
+    text += "\nI will confirm the appointment via chat.";
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(whatsappURL, "_blank");
 }
+
+        
