@@ -1,4 +1,4 @@
-/* ===== GLOBAL RESET ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -152,7 +152,7 @@ hr {
     margin: 50px 0;
 }
 
-/* ===== SERVICES SECTION ===== */
+/* == SERVICES SECTION == */
 .services-container {
     padding: 80px 20px;
     background-image: url(images/clipper-8254064_1280.jpg);
@@ -224,7 +224,7 @@ hr {
     font-size: 14px;
 }
 
-/* Price column alignment */
+
 .service-table-wrapper td:last-child,
 .service-table-wrapper th:last-child {
     text-align: right;
@@ -525,7 +525,7 @@ hr {
     color: blue;
 }
 
-/* Add this to your <style> tag or CSS file */
+
 .social-links a {
     font-size: 24px;       
     text-decoration: none;
