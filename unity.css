@@ -266,6 +266,37 @@ hr {
 
 }
 
+.bookingform {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.bookingform input,
+.bookingform textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.services {
+  display: grid;
+  gap: 10px;
+}
+
+.services button {
+  padding: 10px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.services button:hover {
+  background: #444;
+}
+
 /* ===== PORTFOLIO SECTION ===== */
 .gallery {
     position: relative;
